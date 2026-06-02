@@ -1,5 +1,3 @@
-# Importamos funciones and or para las consultas con múltiples condiciones
-from sqlalchemy import and_, or_
 from sqlalchemy.orm import sessionmaker
 from crear_base_entidades import engine, Carrera
 
