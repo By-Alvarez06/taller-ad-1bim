@@ -20,6 +20,9 @@ class Facultad(Base):
     # Relación 1:N - Una facultad tiene muchas carreras
     carreras = relationship("Carrera", back_populates="facultad")
 
+    def __repr__(self):
+        return f"Facultad({self.id}): Nombre={self.nombre} | Ubicacion={self.ubicacion} | Decano={self.decano}"
+
 # ==========================================
 # 2. ENTIDAD CARRERA
 # ==========================================
@@ -35,6 +38,9 @@ class Carrera(Base):
     # Relaciones
     facultad = relationship("Facultad", back_populates="carreras")
     profesores = relationship("Profesor", back_populates="carrera")
+
+    def __repr__(self):
+        return f"Carrera({self.id}): Nombre={self.nombre} | Codigo={self.codigo} | Facultad={self.facultad.nombre}"
 
 # ==========================================
 # 3. ENTIDAD PROFESOR
@@ -54,6 +60,9 @@ class Profesor(Base):
     carrera = relationship("Carrera", back_populates="profesores")
     recursos = relationship("RecursoAcademico", back_populates="profesor")
 
+    def __repr__(self):
+        return f"Profesor({self.id}): Nombres={self.nombres} | Apellidos={self.apellidos} | Correo={self.correo} | Especialidad={self.especialidad} | Carrera={self.carrera.nombre}"
+
 # ==========================================
 # 4. ENTIDAD RECURSO ACADÉMICO
 # ==========================================
@@ -70,6 +79,9 @@ class RecursoAcademico(Base):
     
     # Relación
     profesor = relationship("Profesor", back_populates="recursos")
+
+    def __repr__(self):
+        return f"RecursoAcademico({self.id}): Titulo={self.titulo} | Tipo={self.tipo} | Fecha={self.fecha_publicacion} | URL={self.url} | Profesor={self.profesor.nombres} {self.profesor.apellidos}"
 
 # Generar físicamente las tablas en la base de datos
 Base.metadata.create_all(engine)
