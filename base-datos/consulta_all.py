@@ -14,3 +14,6 @@ carreras = session.query(Carrera).all()
 
 for carrera in carreras:
     print(f" - {carrera.nombre} (Código: {carrera.codigo}) / Facultad: {carrera.facultad.nombre}")
+
+# Cerrar la sesión
+session.close()

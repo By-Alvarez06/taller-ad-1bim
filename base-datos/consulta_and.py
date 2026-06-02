@@ -21,3 +21,6 @@ profesores_and = session.query(Profesor).filter(
 
 for prof in profesores_and:
     print(f" - {prof.nombres} {prof.apellidos} | Correo: {prof.correo}")
+
+# Cerrar la sesión
+session.close()

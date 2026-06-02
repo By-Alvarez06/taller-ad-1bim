@@ -15,3 +15,11 @@
 **Consulta 1 - session.query().all**
 
 ![Consulta_all](image-3.png)
+
+**Consulta 2-4 | session.query(and_(), or_()) | session.query().filter()**
+
+![Consultas and, filter, or](image-4.png)
+
+**Consulta 5 | session.query().order_by()**
+
+![Consulta orderBy](image-5.png)
