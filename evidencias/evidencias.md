@@ -38,3 +38,7 @@ Cambia a la pestaña Connection en la parte superior y llena los datos exactamen
 - Password: Escribe password (Sacado de POSTGRES_PASSWORD).
 
 ![Funcionamiento en Postgres](image-6.png)
+
+**Consulta - Presentar los recursos académicos de una facultad específica**
+
+![Consulta_nueva](image-7.png)
