@@ -17,4 +17,4 @@ cadena_base_datos_postgres = 'postgresql+psycopg2://user:password@localhost:5434
 # Formato: mysql+driver://usuario:password@host:puerto/nombre_bd?charset=utf8mb4
 cadena_base_datos_mariadb = 'mysql+pymysql://root:rootpassword@localhost:3308/universidad?charset=utf8mb4'
 
-cadena_base_datos = cadena_base_datos_mariadb  # Cambiar variable segun el motor a ocupar
+cadena_base_datos = cadena_base_datos_postgres  # Cambiar variable segun el motor a ocupar
